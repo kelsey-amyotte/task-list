@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <mat-card *ngFor="let list of listService.lists | async">
+    <mat-card-title>
+      {{list.id}}
+      <button mat-icon-button [matMenuTriggerFor]="listMenu">
+        <mat-icon>more_horiz</mat-icon></button>
+      <mat-menu #listMenu="matMenu">
+        <button mat-menu-item (click)="createEditListDialog(list.id)">Edit List</button>
+        <button mat-menu-item (click)="listService.delete(list.id)">Delete List</button>
+      </mat-menu>
+    </mat-card-title>
+    <mat-selection-list #tasks [disableRipple]="true" (selectionChange)="taskService.check($event)">
+      <div class="mat-list-option-block" *ngFor="let task of taskService.tasks | async">
+        <div *ngIf="task.listName == list.id">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_horiz</mat-icon></button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="editTaskDialog(task.id, task.name, task.listName)">Edit Task</button>
+            <button mat-menu-item (click)="taskService.delete(task.id)">Delete Task</button>
+          </mat-menu>
+          <mat-list-option [selected] = "task.completed" [value]="task.id">
+            <div class="mat-list-option-text">{{task.name}}</div>
+          </mat-list-option>
+        </div>
+      </div>
+      <br>
+    </mat-selection-list>
+    <mat-form-field>
+      <input matInput type="text" #newTask (keyup.enter)="taskService.create(newTask.value, list.id); newTask.value = ''">
+      <mat-placeholder class="placeholder">Enter new task</mat-placeholder>
+    </mat-form-field>
+  </mat-card>
+  <button mat-icon-button (click)="createEditListDialog()">
+    <mat-icon>playlist_add</mat-icon></button>
+</div>

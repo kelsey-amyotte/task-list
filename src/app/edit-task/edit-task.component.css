@@ -1,0 +1,11 @@
+.mat-focused .placeholder {
+    color: #ff4081;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #ff4081;
+}
+
+mat-select {
+    color: #ff4081;
+}

@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<div>
+  <mat-form-field *ngIf="isEdit; else newList">
+    <input matInput type="text" placeholder="List Name" [(ngModel)]="listName" (keyup.enter)="save();close();">
+  </mat-form-field>
+  <ng-template #newList>
+    <mat-form-field>
+      <input matInput type="text" placeholder="List Name" [(ngModel)]="listName" (keyup.enter)="create();close();">
+    </mat-form-field>
+  </ng-template>
+  <div mat-dialog-actions>
+    <div *ngIf="isEdit; else add">
+      <button mat-button (click)="save();close();">Save</button>
+    </div>
+    <ng-template #add>
+      <button mat-button (click)="create();close();">Create</button>
+    </ng-template>
+    <button mat-button (click)="close()">Cancel</button>
+  </div>
+</div>

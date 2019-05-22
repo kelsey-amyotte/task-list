@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    background-color: #eee;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, mat-card-title {
+    font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-weight: bold;
+}
+
+mat-card-title {
+    color: #ff4081;
+    color: #000;
+}
+
+mat-card, #loginForm {
+    margin: 30px 0px 0px 0px;
+    border-top: 10px solid #ff4081;
+}
+
+.container {
+    width: 50%;
+    margin: 0px auto;
+}
+
+button.mat-icon-button {
+    float:right;
+}
+
+button.mat-icon-button,.mat-button-ripple {
+    padding-top: 4px;
+}
+
+mat-card-title>button.mat-icon-button,.mat-button-ripple {
+    padding-top: 0px;
+    color: #000;
+}
+
+mat-form-field {
+    width: calc(100% - 32px);
+    padding: 0 16px;
+}
+
+/* --- manually overriding default google input CSS --- */
+
+.mat-input-element {
+    caret-color: #ff4081;
+}
+
+.mat-focused .placeholder {
+    color: #ff4081;
+}
+
+.mat-form-field.mat-focused>.mat-form-field-wrapper>.mat-form-field-underline,
+.mat-form-field.mat-focused>.mat-form-field-wrapper>.mat-form-field-underline>.mat-form-field-ripple {
+    background-color: #ff4081;
+}
+
+.mat-card-title {
+    font-weight: bold;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #ff4081;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: #ff4081;
+}

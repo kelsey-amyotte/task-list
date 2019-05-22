@@ -1,0 +1,16 @@
+#loginForm {
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form-group:nth-child(3) {
+    text-align: center;
+}
+
+.error {
+    text-align: center;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+}

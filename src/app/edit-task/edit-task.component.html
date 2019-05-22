@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<div>
+  <mat-form-field>
+    <mat-select placeholder="List" [(value)]="listName">
+      <mat-option *ngFor="let list of lists | async" [value]="list.id">
+        {{ list.id }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Task Name" type="text" [(ngModel)]="name" (keyup.enter)="save();close();">
+    <input type="hidden" [value]="id">
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button (click)="save();close();">Save</button>
+    <button mat-button (click)="close()">Cancel</button>
+  </div>
+</div>
