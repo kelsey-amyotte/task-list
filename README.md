@@ -1,14 +1,13 @@
 # Tasklist
+This is a simple task list app - you can log in, create/edit/delete a list, and create/edit/delete tasks as you see fit. This was created so that I could learn Angular and Angular Material. I mostly wanted something that looked and performed nicely. I also wanted to learn more about NoSQL databases and asynchronous functions.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+# Technologies
+This is a FAN stack app (Firebase, Angular, Node).
 
-Link to demo:
-
+# Live Demo
 Https://tasklist-amyotte.herokuapp.com
 
-It will take a few seconds to boot up the server since it is hosted on Heroku's free hosting tier.
+Note: It will take a few seconds to boot up the server since it is hosted on Heroku's free hosting tier.
 
 Login:
 testacc321@fakedomain.fake / testacc123
-
-// TODO: Optimize for mobile
