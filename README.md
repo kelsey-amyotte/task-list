@@ -1,5 +1,5 @@
 # Tasklist
-This is a simple task list app - you can log in, create/edit/delete a list, and create/edit/delete tasks as you see fit. This was created so that I could learn Angular and Angular Material. I mostly wanted something that looked and performed nicely. I also wanted to learn more about NoSQL databases and asynchronous functions.
+This is a simple task list app - you can log in, create/edit/delete a list, and create/edit/delete tasks as you see fit. This was created so that I could learn Angular and Angular Material. I also wanted to learn more about NoSQL databases and asynchronous functions.
 
 # Technologies
 This is a FAN stack app (Firebase, Angular, Node).
