@@ -11,3 +11,7 @@ Note: It will take a few seconds to boot up the server since it is hosted on Her
 
 Login:
 testacc321@fakedomain.fake / testacc123
+
+# Special Note
+
+There is no commit history on this repo because the actual repo that the website is running off of has API keys and other sensitive information. I would be happy to share the private version of this repo upon request.
